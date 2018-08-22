@@ -1,0 +1,27 @@
+mat-toolbar {
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1533359856343-b66cefc8bdd7?ixlib=rb-0.3.5&s=e6f5d8aca61ab3651463fc562d7e61f4&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb');
+  height: 10vh;
+}
+
+.header {
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  &-link {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+  &-link:hover {
+    color: #005CF9;
+  }
+}
+
+.btn-login {
+  margin-left: 1em;
+}
