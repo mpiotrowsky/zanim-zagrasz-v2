@@ -30,12 +30,20 @@ body {
 }
 
 .mat-button {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff !important;
+  color: #005CF9;
 }
 
 .mat-raised-button {
   color: #fff;
   background-color: #005CF9;
+}
+
+.mat-stroked-button {
+  background-color: transparent;
+  color: #005CF9;
+  border: 1px solid #005CF9 !important;
+}
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background: #005CF9;
 }
