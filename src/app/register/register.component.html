@@ -2,6 +2,25 @@
   <mat-card>
     <mat-card-content>
       <mat-card-title>Register</mat-card-title>
+      <div *ngIf="wrongCredentials">
+        <h3 class="wrong-credentials">Passwords don't match!</h3>
+      </div>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <mat-form-field>
+          <input matInput placeholder="Enter your email" [formControl]="email" type="email" email required name="Email">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Enter your password" required name="Password" [type]="hide ? 'password' : 'text'" [formControl]="password">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Retype your password" required name="Password" [type]="hide ? 'password' : 'text'" [formControl]="password2">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+        <mat-card-actions>
+          <button class="button-filled" mat-raised-button type="submit" [disabled]="!registerForm.valid">Register</button>
+        </mat-card-actions>
+      </form>
     </mat-card-content>
   </mat-card>
 </div>
