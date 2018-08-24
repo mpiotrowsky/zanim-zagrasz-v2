@@ -1,11 +1,14 @@
 <div class="container">
-  <mat-card>
-    <mat-card-content>
+  <mat-card class="main">
+    <mat-card-content class="main-content">
       <mat-card-title>Register</mat-card-title>
       <div *ngIf="wrongCredentials">
         <h3 class="wrong-credentials">Passwords don't match!</h3>
       </div>
       <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <mat-form-field>
+          <input matInput placeholder="What will be your username?" [formControl]="name" type="text" required name="Name">
+        </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="Enter your email" [formControl]="email" type="email" email required name="Email">
         </mat-form-field>

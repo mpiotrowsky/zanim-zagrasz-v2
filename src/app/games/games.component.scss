@@ -8,14 +8,22 @@
 
 .card {
   width: 300px;
+  margin-bottom: 2.5vh;
 }
 
 .card-title {
   font-size: 1.5em;
+  font-weight: 600;
 }
 
 .card-subtitle {
   font-size: 1.25em;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 
