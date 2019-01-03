@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { GamesComponent } from './games/games.component';
 import { HeaderComponent } from './header/header.component';
+import { AddGameComponent } from './games/add-game/add-game.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './header/header.component';
     RegisterComponent,
     LoginComponent,
     GamesComponent,
-    HeaderComponent
+    HeaderComponent,
+    AddGameComponent
   ],
   imports: [
     BrowserModule,
