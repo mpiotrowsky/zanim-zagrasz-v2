@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card class="main">
     <mat-card-content class="main-content">
-      <mat-card-title>Games</mat-card-title>
+      <mat-card-title>{{ 'Games' | translate }}</mat-card-title>
       <div class="cards">
 
         <mat-card class="card" *ngFor="let game of games">
@@ -16,8 +16,8 @@
             </p>
           </mat-card-content>
           <mat-card-actions class="card-buttons">
-            <button mat-button>ADD</button>
-            <button mat-stroked-button>SHARE</button>
+            <button mat-button>{{ 'Add' | translate }}</button>
+            <button mat-stroked-button>{{ 'Share' | translate }}</button>
           </mat-card-actions>
         </mat-card>
 

@@ -1,20 +1,20 @@
 <div class="container">
   <mat-card class="main">
     <mat-card-content class="main-content">
-      <mat-card-title>Login</mat-card-title>
+      <mat-card-title>{{ 'Login' | translate }}</mat-card-title>
       <div *ngIf="wrongCredentials">
         <h3 class="wrong-credentials">You have submitted wrong credentials!</h3>
       </div>
       <form [formGroup]="loginForm" (ngSubmit)="login()">
         <mat-form-field>
-          <input matInput placeholder="Enter your email" [formControl]="email" type="email" email required name="Email">
+          <input matInput placeholder="{{ 'EnterYourEmail' | translate }}" [formControl]="email" type="email" email required name="email">
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Enter your password" required name="Password" [type]="hide ? 'password' : 'text'" [formControl]="password">
+          <input matInput placeholder="{{ 'EnterYourPassword' | translate }}" required name="password" [type]="hide ? 'password' : 'text'" [formControl]="password">
           <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
         <mat-card-actions>
-          <button class="button-filled" mat-raised-button type="submit" [disabled]="!loginForm.valid">Login</button>
+          <button class="button-filled" mat-raised-button type="submit" [disabled]="!loginForm.valid">{{ 'Login' | translate }}</button>
         </mat-card-actions>
       </form>
     </mat-card-content>

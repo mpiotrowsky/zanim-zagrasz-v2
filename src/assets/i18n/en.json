@@ -1,6 +1,19 @@
 {
   "Login": "Login",
   "Register": "Register",
+  "SignUp": "Sign up!",
   "ListOfGames": "List of games",
-  "AddNewGame": "Add new game"
+  "AddNewGame": "Add new game",
+  "Welcome": "Welcome on Zanim zagrasz",
+  "PageWithAdvices": "Page with advices for gamers",
+  "Games": "Games",
+  "Add": "Add",
+  "Share": "Share",
+  "Title": "Title",
+  "Genre": "Genre",
+  "EnterYourEmail": "Enter your email",
+  "EnterYourPassword": "Enter your password",
+  "PasswordsDontMatch": "Passwords don't match",
+  "WhatUsername": "What will be your username?",
+  "RetypePassword": "Retype your password"
 }

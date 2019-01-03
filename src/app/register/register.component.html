@@ -1,27 +1,27 @@
 <div class="container">
   <mat-card class="main">
     <mat-card-content class="main-content">
-      <mat-card-title>Register</mat-card-title>
+      <mat-card-title>{{ 'Register' | translate }}</mat-card-title>
       <div *ngIf="wrongCredentials">
-        <h3 class="wrong-credentials">Passwords don't match!</h3>
+        <h3 class="wrong-credentials">{{ 'PasswordsDontMatch' | translate }}!</h3>
       </div>
       <form [formGroup]="registerForm" (ngSubmit)="register()">
         <mat-form-field>
-          <input matInput placeholder="What will be your username?" [formControl]="name" type="text" required name="Name">
+          <input matInput placeholder="{{ 'WhatUsername' | translate }}" [formControl]="name" type="text" required name="Name">
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Enter your email" [formControl]="email" type="email" email required name="Email">
+          <input matInput placeholder="{{ 'EnterYourEmail' | translate }}" [formControl]="email" type="email" email required name="Email">
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Enter your password" required name="Password" [type]="hide ? 'password' : 'text'" [formControl]="password">
+          <input matInput placeholder="{{ 'EnterYourPassword' | translate }}" required name="Password" [type]="hide ? 'password' : 'text'" [formControl]="password">
           <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Retype your password" required name="Password" [type]="hide ? 'password' : 'text'" [formControl]="password2">
+          <input matInput placeholder="{{ 'RetypePassword' | translate }}" required name="Password" [type]="hide ? 'password' : 'text'" [formControl]="password2">
           <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
         <mat-card-actions>
-          <button class="button-filled" mat-raised-button type="submit" [disabled]="!registerForm.valid">Register</button>
+          <button class="button-filled" mat-raised-button type="submit" [disabled]="!registerForm.valid">{{ 'SignUp' | translate }}</button>
         </mat-card-actions>
       </form>
     </mat-card-content>

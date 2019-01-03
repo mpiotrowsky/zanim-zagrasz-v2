@@ -1,6 +1,19 @@
 {
   "Login": "Zaloguj",
   "Register": "Rejestracja",
+  "SignUp": "Zarejestruj!",
   "ListOfGames": "Lista gier",
-  "AddNewGame": "Dodaj nową grę"
+  "AddNewGame": "Dodaj nową grę",
+  "Welcome": "Witaj na Zanim zagrasz",
+  "PageWithAdvices": "Stronie z poradami dla graczy",
+  "Games": "Gry",
+  "Add": "Dodaj",
+  "Share": "Podziel się",
+  "Title": "Tytuł",
+  "Genre": "Gatunek",
+  "EnterYourEmail": "Podaj swój email",
+  "EnterYourPassword": "Podaj swoje hasło",
+  "PasswordsDontMatch": "Hasła się nie zgadzają",
+  "WhatUsername": "Jaka będzie twoja nazwa?",
+  "RetypePassword": "Wpisz ponownie hasło"
 }
