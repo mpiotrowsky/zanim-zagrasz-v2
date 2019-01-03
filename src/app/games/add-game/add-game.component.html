@@ -1,0 +1,18 @@
+<div class="container">
+  <mat-card class="main">
+    <mat-card-content class="main-content">
+      <mat-card-title>Add new game</mat-card-title>
+      <form [formGroup]="addGameForm" (ngSubmit)="addGame()">
+        <mat-form-field>
+          <input matInput placeholder="Title" [formControl]="title" type="text" required name="title">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Genre" required name="genre" type="text" [formControl]="genre">
+        </mat-form-field>
+        <mat-card-actions>
+          <button class="button-filled" mat-raised-button type="submit" [disabled]="!addGameForm.valid">Add</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
