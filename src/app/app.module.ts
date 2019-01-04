@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { GamesComponent } from './games/games.component';
 import { HeaderComponent } from './header/header.component';
 import { AddGameComponent } from './games/add-game/add-game.component';
+import { RegistrationService } from './services/registration.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -48,7 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [RegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
