@@ -14,12 +14,14 @@ export class RegisterComponent implements OnInit {
   response;
 
   name = new FormControl('');
+  username = new FormControl('');
   email = new FormControl('');
   password = new FormControl('');
   password2 = new FormControl('');
 
   registerForm: FormGroup = this.builder.group({
     name: this.name,
+    username: this.username,
     email: this.email,
     password: this.password,
     password2: this.password2

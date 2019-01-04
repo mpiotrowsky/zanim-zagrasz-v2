@@ -14,6 +14,7 @@
   "EnterYourEmail": "Enter your email",
   "EnterYourPassword": "Enter your password",
   "PasswordsDontMatch": "Passwords don't match",
-  "WhatUsername": "What will be your username?",
+  "EnterUsername": "Enter your username",
+  "EnterName": "Enter your name",
   "RetypePassword": "Retype your password"
 }

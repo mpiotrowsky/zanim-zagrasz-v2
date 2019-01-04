@@ -7,7 +7,10 @@
       </div>
       <form [formGroup]="registerForm" (ngSubmit)="register()">
         <mat-form-field>
-          <input matInput placeholder="{{ 'WhatUsername' | translate }}" [formControl]="name" type="text" required name="Name">
+          <input matInput placeholder="{{ 'EnterName' | translate }}" [formControl]="name" type="text" required name="Name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="{{ 'EnterUsername' | translate }}" [formControl]="username" type="text" required name="Username">
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="{{ 'EnterYourEmail' | translate }}" [formControl]="email" type="email" email required name="Email">
