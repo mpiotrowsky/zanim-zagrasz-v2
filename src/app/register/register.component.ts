@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { RegistrationService } from '../services/registration.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
   wrongCredentials = false;
   response;
   userRegistered: boolean;
+  registrationError: boolean;
 
   name = new FormControl('');
   username = new FormControl('');
@@ -32,13 +33,7 @@ export class RegisterComponent implements OnInit {
   constructor(private builder: FormBuilder,
     private http: HttpClient,
     private router: Router,
-    private registrationService: RegistrationService) {
-      this.registrationService.userRegistration.subscribe(
-        (user) => {
-          this.userRegistered = user;
-        }
-      );
-    }
+    private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -47,7 +42,15 @@ export class RegisterComponent implements OnInit {
     console.log(this.registerForm.value);
     this.wrongCredentials = false;
     if (this.password.value === this.password2.value) {
-      this.registrationService.registerUser(this.registerForm.value);
+      this.authService.registerUser(this.registerForm.value).subscribe(data => {
+        console.log(data);
+        this.response = data;
+        if (this.response.success === true) {
+          this.userRegistered = true;
+        } else {
+          this.registrationError = true;
+        }
+      });
     } else {
       this.wrongCredentials = true;
     }

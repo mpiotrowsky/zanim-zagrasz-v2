@@ -3,11 +3,17 @@
     <mat-card-content class="main-content">
       <mat-card-title>{{ 'Login' | translate }}</mat-card-title>
       <div *ngIf="wrongCredentials">
-        <h3 class="wrong-credentials">You have submitted wrong credentials!</h3>
+        <h3 class="wrong-credentials">{{ 'WrongCredentials' | translate }}</h3>
+      </div>
+      <div *ngIf="userLoggedIn">
+        <h3 class="login-info">{{ 'LoggedInSuccessfully' | translate }}</h3>
+      </div>
+      <div *ngIf="loginError">
+        <h3 class="login-info">{{ 'LoginError' | translate }}</h3>
       </div>
       <form [formGroup]="loginForm" (ngSubmit)="login()">
         <mat-form-field>
-          <input matInput placeholder="{{ 'EnterYourEmail' | translate }}" [formControl]="email" type="email" email required name="email">
+          <input matInput placeholder="{{ 'EnterYourUsername' | translate }}" [formControl]="username" type="text" required name="username">
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="{{ 'EnterYourPassword' | translate }}" required name="password" [type]="hide ? 'password' : 'text'" [formControl]="password">

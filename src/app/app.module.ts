@@ -16,7 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { GamesComponent } from './games/games.component';
 import { HeaderComponent } from './header/header.component';
 import { AddGameComponent } from './games/add-game/add-game.component';
-import { RegistrationService } from './services/registration.service';
+import { AuthService } from './services/auth.service';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     GamesComponent,
     HeaderComponent,
-    AddGameComponent
+    AddGameComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [RegistrationService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

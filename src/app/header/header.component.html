@@ -11,6 +11,8 @@
       </button>
       <button class="btn-login" routerLink="login" routerLinkActive="active-link" mat-stroked-button>{{ 'Login' | translate }}
       </button>
+      <button class="btn-login" mat-stroked-button (click)="logout()">{{ 'Logout' | translate }}
+      </button>
     </div>
   </div>
 </mat-toolbar>

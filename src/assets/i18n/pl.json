@@ -2,6 +2,7 @@
   "Login": "Zaloguj",
   "Register": "Rejestracja",
   "SignUp": "Zarejestruj!",
+  "Logout": "Wyloguj",
   "ListOfGames": "Lista gier",
   "AddNewGame": "Dodaj nową grę",
   "Welcome": "Witaj na Zanim zagrasz",
@@ -12,10 +13,15 @@
   "Title": "Tytuł",
   "Genre": "Gatunek",
   "EnterYourEmail": "Podaj swój email",
+  "EnterYourUsername": "Podaj swoją nazwę użytkownika",
   "EnterYourPassword": "Podaj swoje hasło",
   "PasswordsDontMatch": "Hasła się nie zgadzają",
   "EnterUsername": "Podaj swoją nazwę użytkownika",
   "EnterName": "Podaj swoje imię",
   "RetypePassword": "Wpisz ponownie hasło",
-  "RegisteredSuccessfully": "Rejestracja zakończona sukcesem! Możesz teraz się zalogować"
+  "RegisteredSuccessfully": "Rejestracja zakończona sukcesem! Możesz teraz się zalogować",
+  "RegistrationError": "Wystąpił błąd, spróbuj ponownie później",
+  "WrongCredentials": "Podałeś błędne dane!",
+  "LoginError": "Wystąpił błąd, spróbuj ponownie później",
+  "LoggedInSuccessfully": "Zostałeś zalogowany!"
 }
