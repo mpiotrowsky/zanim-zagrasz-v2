@@ -13,6 +13,7 @@ export class RegisterComponent implements OnInit {
   hide = true;
   wrongCredentials = false;
   response;
+  userRegistered: boolean;
 
   name = new FormControl('');
   username = new FormControl('');
@@ -31,7 +32,13 @@ export class RegisterComponent implements OnInit {
   constructor(private builder: FormBuilder,
     private http: HttpClient,
     private router: Router,
-    private registrationService: RegistrationService) { }
+    private registrationService: RegistrationService) {
+      this.registrationService.userRegistration.subscribe(
+        (user) => {
+          this.userRegistered = user;
+        }
+      );
+    }
 
   ngOnInit() {
   }

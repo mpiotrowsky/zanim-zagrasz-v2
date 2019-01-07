@@ -18,12 +18,14 @@ export class RegistrationService {
     this.http.post(this.url + 'users/register', user).subscribe(
       res => {
         console.log(res);
-        this.userRegistration.emit(true);
+        this.userRegistered = true;
+        this.userRegistration.emit(this.userRegistered);
       },
       err => {
         console.log('Error occured');
         console.log(err);
-        this.userRegistration.emit(false);
+        this.userRegistered = false;
+        this.userRegistration.emit(this.userRegistered);
       },
       () => console.log('success')
     );

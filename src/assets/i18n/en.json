@@ -16,5 +16,6 @@
   "PasswordsDontMatch": "Passwords don't match",
   "EnterUsername": "Enter your username",
   "EnterName": "Enter your name",
-  "RetypePassword": "Retype your password"
+  "RetypePassword": "Retype your password",
+  "RegisteredSuccessfully": "Registered successfully! You can login now"
 }

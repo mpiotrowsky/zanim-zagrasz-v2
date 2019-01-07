@@ -16,5 +16,6 @@
   "PasswordsDontMatch": "Hasła się nie zgadzają",
   "EnterUsername": "Podaj swoją nazwę użytkownika",
   "EnterName": "Podaj swoje imię",
-  "RetypePassword": "Wpisz ponownie hasło"
+  "RetypePassword": "Wpisz ponownie hasło",
+  "RegisteredSuccessfully": "Rejestracja zakończona sukcesem! Możesz teraz się zalogować"
 }
