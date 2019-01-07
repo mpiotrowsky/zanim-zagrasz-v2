@@ -1,5 +1,5 @@
-import { Injectable, EventEmitter } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +19,24 @@ export class AuthService {
     return this.http.post(this.url + 'users/authenticate', user);
   }
 
+  getProfile() {
+    this.loadToken();
+    const headers = new HttpHeaders({
+      'Authorization': this.authToken
+    });
+    return this.http.get(this.url + 'users/profile', {headers: headers});
+  }
+
   storeUserData(token, user) {
     localStorage.setItem('id_token', token);
     localStorage.setItem('user', JSON.stringify(user));
     this.authToken = token;
     this.user = user;
+  }
+
+  loadToken() {
+    const token = localStorage.getItem('id_token');
+    this.authToken = token;
   }
 
   logout() {

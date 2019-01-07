@@ -17,7 +17,7 @@ import { GamesComponent } from './games/games.component';
 import { HeaderComponent } from './header/header.component';
 import { AddGameComponent } from './games/add-game/add-game.component';
 import { AuthService } from './services/auth.service';
-import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -32,7 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     GamesComponent,
     HeaderComponent,
     AddGameComponent,
-    UserDashboardComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

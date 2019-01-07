@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       if (this.response.success === true) {
         this.userLoggedIn = true;
         this.authService.storeUserData(this.response.token, this.response.user);
-        this.router.navigate(['user-dashboard']);
+        this.router.navigate(['profile']);
       } else if (this.response.msg === 'Wrong password') {
         this.wrongCredentials = true;
       } else {
