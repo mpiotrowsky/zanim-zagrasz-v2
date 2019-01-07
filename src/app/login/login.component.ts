@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.authService.authenticateUser(this.loginForm.value).subscribe(data => {
-      console.log(data);
       this.response = data;
       if (this.response.success === true) {
         this.userLoggedIn = true;

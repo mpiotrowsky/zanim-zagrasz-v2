@@ -23,5 +23,6 @@
   "RegistrationError": "Error occured, please try again later",
   "WrongCredentials": "You have submitted wrong credentials!",
   "LoginError": "Error occured, please try again later",
-  "LoggedInSuccessfully": "Login successfully!"
+  "LoggedInSuccessfully": "Login successfully!",
+  "Profile": "Profile"
 }

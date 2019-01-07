@@ -19,7 +19,6 @@ export class ProfileComponent implements OnInit {
       this.response = profile;
       this.user = this.response.user;
     });
-    // this.user = this.authService.user;
   }
 
 }

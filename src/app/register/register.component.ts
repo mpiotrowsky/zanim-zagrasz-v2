@@ -39,11 +39,9 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    console.log(this.registerForm.value);
     this.wrongCredentials = false;
     if (this.password.value === this.password2.value) {
       this.authService.registerUser(this.registerForm.value).subscribe(data => {
-        console.log(data);
         this.response = data;
         if (this.response.success === true) {
           this.userRegistered = true;

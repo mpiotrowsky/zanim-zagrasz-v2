@@ -23,5 +23,6 @@
   "RegistrationError": "Wystąpił błąd, spróbuj ponownie później",
   "WrongCredentials": "Podałeś błędne dane!",
   "LoginError": "Wystąpił błąd, spróbuj ponownie później",
-  "LoggedInSuccessfully": "Zostałeś zalogowany!"
+  "LoggedInSuccessfully": "Zostałeś zalogowany!",
+  "Profile": "Profil"
 }

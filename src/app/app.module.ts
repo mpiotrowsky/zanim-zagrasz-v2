@@ -8,6 +8,7 @@ import { MaterialModule } from './shared/material.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { JwtModule } from '@auth0/angular-jwt';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +22,10 @@ import { ProfileComponent } from './profile/profile.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
+}
+
+export function tokenGetter() {
+  return localStorage.getItem('id_token');
 }
 
 @NgModule({
@@ -48,6 +53,11 @@ export function HttpLoaderFactory(http: HttpClient) {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
+      }
+    }),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter
       }
     })
   ],

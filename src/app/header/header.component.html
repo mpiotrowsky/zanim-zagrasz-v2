@@ -4,14 +4,16 @@
     </a>
     <a class="header-link" routerLink="games" routerLinkActive="active-link">{{ 'ListOfGames' | translate }}
     </a>
-    <a class="header-link" routerLink="games/add" routerLinkActive="active-link">{{ 'AddNewGame' | translate }}
+    <a *ngIf="!authService.loggedIn()" class="header-link" routerLink="games/add" routerLinkActive="active-link">{{ 'AddNewGame' | translate }}
     </a>
     <div class="header-actions">
-      <button class="btn-register" routerLink="register" routerLinkActive="active-link" mat-raised-button>{{ 'Register' | translate }}
+      <button *ngIf="authService.loggedIn()" class="btn-register" routerLink="register" routerLinkActive="active-link" mat-raised-button>{{ 'Register' | translate }}
       </button>
-      <button class="btn-login" routerLink="login" routerLinkActive="active-link" mat-stroked-button>{{ 'Login' | translate }}
+      <button *ngIf="authService.loggedIn()" class="btn-login" routerLink="login" routerLinkActive="active-link" mat-stroked-button>{{ 'Login' | translate }}
       </button>
-      <button class="btn-login" mat-stroked-button (click)="logout()">{{ 'Logout' | translate }}
+      <button *ngIf="!authService.loggedIn()" class="btn-login" routerLink="profile" routerLinkActive="active-link" mat-stroked-button>{{ 'Profile' | translate }}
+      </button>
+      <button *ngIf="!authService.loggedIn()" class="btn-login" mat-stroked-button (click)="logout()">{{ 'Logout' | translate }}
       </button>
     </div>
   </div>
