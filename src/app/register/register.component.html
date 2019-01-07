@@ -5,6 +5,9 @@
       <div *ngIf="wrongCredentials">
         <h3 class="wrong-credentials">{{ 'PasswordsDontMatch' | translate }}!</h3>
       </div>
+      <div *ngIf="userRegistered">
+        <h3 class="registered-successfully">{{ 'RegisteredSuccessfully' | translate }}</h3>
+      </div>
       <form [formGroup]="registerForm" (ngSubmit)="register()">
         <mat-form-field>
           <input matInput placeholder="{{ 'EnterName' | translate }}" [formControl]="name" type="text" required name="Name">
