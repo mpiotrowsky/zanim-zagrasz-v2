@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,38 +11,40 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   hide = true;
-  wrongCredentials = false;
+  wrongCredentials: boolean;
   response;
+  userLoggedIn: boolean;
+  loginError: boolean;
 
-  email = new FormControl('');
+  username = new FormControl('');
   password = new FormControl('');
 
   loginForm: FormGroup = this.builder.group({
-    email: this.email,
+    username: this.username,
     password: this.password
   });
 
   constructor(private builder: FormBuilder,
     private http: HttpClient,
-    private router: Router) { }
+    private router: Router,
+    private authService: AuthService) { }
 
   ngOnInit() {
   }
 
   login() {
-    this.wrongCredentials = false;
-    this.http.post('', this.loginForm.value).subscribe(
-      res => {
-        console.log(res);
-        this.wrongCredentials = false;
-      },
-      err => {
+    this.authService.authenticateUser(this.loginForm.value).subscribe(data => {
+      this.response = data;
+      if (this.response.success === true) {
+        this.userLoggedIn = true;
+        this.authService.storeUserData(this.response.token, this.response.user);
+        this.router.navigate(['profile']);
+      } else if (this.response.msg === 'Wrong password') {
         this.wrongCredentials = true;
-        console.log('Error occured');
-        console.log(err);
-      },
-      () => console.log('success')
-    );
+      } else {
+        this.loginError = true;
+      }
+    });
   }
 
 }

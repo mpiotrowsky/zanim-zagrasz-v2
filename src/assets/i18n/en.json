@@ -2,6 +2,7 @@
   "Login": "Login",
   "Register": "Register",
   "SignUp": "Sign up!",
+  "Logout": "Logout",
   "ListOfGames": "List of games",
   "AddNewGame": "Add new game",
   "Welcome": "Welcome on Zanim zagrasz",
@@ -12,10 +13,16 @@
   "Title": "Title",
   "Genre": "Genre",
   "EnterYourEmail": "Enter your email",
+  "EnterYourUsername": "Enter your username",
   "EnterYourPassword": "Enter your password",
   "PasswordsDontMatch": "Passwords don't match",
   "EnterUsername": "Enter your username",
   "EnterName": "Enter your name",
   "RetypePassword": "Retype your password",
-  "RegisteredSuccessfully": "Registered successfully! You can login now"
+  "RegisteredSuccessfully": "Registered successfully! You can login now",
+  "RegistrationError": "Error occured, please try again later",
+  "WrongCredentials": "You have submitted wrong credentials!",
+  "LoginError": "Error occured, please try again later",
+  "LoggedInSuccessfully": "Login successfully!",
+  "Profile": "Profile"
 }
