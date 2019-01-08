@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { AddGameComponent } from './games/add-game/add-game.component';
 import { AuthService } from './services/auth.service';
 import { ProfileComponent } from './profile/profile.component';
+import { FooterComponent } from './footer/footer.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -37,7 +38,8 @@ export function tokenGetter() {
     GamesComponent,
     HeaderComponent,
     AddGameComponent,
-    ProfileComponent
+    ProfileComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

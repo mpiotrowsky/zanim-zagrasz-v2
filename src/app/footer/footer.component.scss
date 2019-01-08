@@ -1,0 +1,22 @@
+mat-toolbar {
+  background-size: cover;
+  background-image: url('../../assets/header.jpg');
+  height: 5vh;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+}
+
+.footer {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  &-credits {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    color: #fff;
+  }
+}
